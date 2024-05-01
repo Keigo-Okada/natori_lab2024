@@ -8,6 +8,10 @@
 
 ## LDA
 lda分析は、lda.pyとstopwords_list.txtを用いる。実際の分析はpythonで実行し、結果にノイズが多く生じる場合、ストップワードを設定し除去する。
+Rを用いたlda.Rも存在する。こちらはquantedaを用いている。
+
+詳しくはquantedaの公式サイトを参照。
+[事例: 衆議院外務委員会の議事録](https://quanteda.io/articles/pkgdown/examples/japanese_speech_ja.html)
 
 ## tf-idf
 市長と議員での発言内容にtf-idf分析を行う。
