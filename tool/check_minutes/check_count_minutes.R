@@ -14,7 +14,7 @@ list_files <- function(folder_path) {
 }
 
 #定例会テーブルの読み込み
-df <- read_csv("teireikai.csv")
+df <- read_csv("kurashiki_teirei.csv")
 
 #そのまま日付変換出来なかったため、一度分割した上で日付型として再度格納
 # 年、月、日に分割して新しい列に保存
