@@ -18,7 +18,7 @@ list_files <- function(folder_path) {
 }
 
 #定例会テーブルの読み込み
-rmtg_df <- read_csv("/Users/okadakeigo/Downloads/215.三木市/miki_teirei.csv")
+rmtg_df <- read_csv("/215.三木市/miki_teirei.csv")
 #そのまま日付変換出来なかったため、一度分割した上で日付型として再度格納
 # 年、月、日に分割して新しい列に保存
 rmtg_df$s_year <- substr(rmtg_df$start_date, 1, 4)
@@ -36,7 +36,7 @@ rmtg_df$final_date <- as.Date(paste(rmtg_df$f_year,rmtg_df$f_month,rmtg_df$f_day
 rmtg_df <- rmtg_df[, names(rmtg_df) %in% c('ID_teirei', 'jis_code','start_date','final_date')]
 
 # フォルダー内のファイルの一覧を取得
-folder_path <- "/Users/okadakeigo/Downloads/28215.三木市/"
+folder_path <- "/28215.三木市/"
 file_lists <- list_files(folder_path)
 file_lists <- lapply(file_lists, extract_date)
 
@@ -70,7 +70,7 @@ count <- kaigi_df %>%
 #view(count)
 
 #出力
-write.csv(kaigi_df, "/Users/okadakeigo/Downloads/215.三木市/miki_kaigi.csv")
+write.csv(kaigi_df, "/215.三木市/miki_kaigi.csv")
 view(kaigi_df)
 
 
