@@ -16,7 +16,7 @@ list_files <- function(folder_path) {
 }
 
 #定例会テーブルの読み込み
-df <- read_csv("//Users/okadakeigo/Downloads/215.三木市/miki_teirei.csv")
+df <- read_csv("/215.三木市/miki_teirei.csv")
  
 #そのまま日付変換出来なかったため、一度分割した上で日付型として再度格納
 # 年、月、日に分割して新しい列に保存
@@ -35,7 +35,7 @@ df$final_date <- as.Date(paste(df$f_year, df$f_month, df$f_day, sep = "-"))
 df <- df[, !(names(df) %in% c("s_year", "s_month", "s_day","f_year", "f_month", "f_day"))]
 
 # フォルダー内のファイルの一覧を取得
-folder_path <- "/Users/okadakeigo/Downloads/28215.三木市/"
+folder_path <- "/28215.三木市/"
 file_lists <- list_files(folder_path)
 file_lists <- lapply(file_lists, extract_date)
 #print(file_lists)
