@@ -4,7 +4,7 @@ library(dplyr)
 #定例会IDごとの議員数をチェックするためのコード。
 
 
-df_m <- read_csv("/Users/okadakeigo/Downloads/215.三木市/miki_iinkai.csv")
+df_m <- read_csv("/215.三木市/miki_iinkai.csv")
 
 # 特定の列が欠損値を含む行を削除
 df_m <- df_m %>% filter(!is.na(ID_teirei))
